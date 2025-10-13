@@ -25,25 +25,13 @@ export default function Header() {
         </Link>
 
         <div className="flex items-center gap-2 md:gap-4">
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-foreground/70 transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
           <Button variant="ghost" size="icon" aria-label="Acompanhe">
             <Eye className="h-5 w-5" />
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden" aria-label="Abrir menu">
+              <Button variant="ghost" size="icon" aria-label="Abrir menu">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
