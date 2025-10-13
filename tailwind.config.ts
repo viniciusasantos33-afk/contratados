@@ -8,11 +8,13 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['Arial', 'sans-serif'],
+        headline: ['Arial', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
