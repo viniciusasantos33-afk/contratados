@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/header';
 import StarryBackground from '@/components/starry-background';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Contratados',
@@ -21,6 +22,7 @@ export default function RootLayout({
         <div className="crt-effect relative z-10 flex min-h-screen flex-col">
           <Header />
           <main className="flex-grow">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
