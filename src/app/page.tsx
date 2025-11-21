@@ -47,7 +47,7 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row items-center w-full max-w-5xl md:space-x-8 mb-16 space-y-8 md:space-y-0">
           {/* Left Column */}
-          <div className="flex ml-0 flex-col md:w-1/2 space-y-6 items-start text-left">
+          <div className="flex ml-0 flex-col w-full md:w-1/2 space-y-6 items-start text-left">
             <Image
               src="/title.png" // Title Image
               width={300}
@@ -104,16 +104,14 @@ export default function Home() {
           />
         </div>
         {/* Text Section */}
-        <div className="mt-8">
+        <div className="mt-8 text-center">
           <h3 className="text-3xl font-bold text-glitch" data-text="SÉRGIO INTÉLI">SÉRGIO INTÉLI</h3>
           <h4 className="text-xl text-foreground/90 mt-2 text-glitch" data-text="MAIS DE 69 INFRAÇÕES EVITADAS!">MAIS DE 69 INFRAÇÕES EVITADAS!</h4>
-          <p className="max-w-2xl mx-auto mt-4 leading-relaxed text-foreground/80">
-          <ul className="list-disc text-center list-inside space-y-2 text-left text-foreground/80 md:text-lg">
+          <ul className="max-w-2xl mx-auto mt-4 leading-relaxed text-foreground/80 list-disc list-inside space-y-2 text-left md:text-lg">
               <li>Seja um CONTRATADO DO MÊS superando seus colegas de trabalho na quantidade de infrações evitadas!</li>
               <li>Por meio de denuncias, punições ou tomada de medidas!</li>
               <li>Sua foto vai ser mostrada na nossa página de início!</li>
-            </ul>          
-            </p>
+            </ul>
         </div>
       </div>
     </div>

@@ -56,7 +56,7 @@ export default function ProfilePage() {
 
         <div className="my-1">
           <Image
-            src="/eye-single.png"
+            src="/eye.png"
             width={200}
             height={100}
             alt="Small Logo"

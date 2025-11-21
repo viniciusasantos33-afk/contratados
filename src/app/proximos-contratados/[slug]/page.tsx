@@ -39,7 +39,7 @@ const profiles = [
     description:
       '<div class="space-y-2"><p class="text-left"><a class="text-green-400 underline text-bold" href="#">A</a> vizinha de sua residência foi vista com outro homem que não era o marido</p><p class="text-left">Foram tomadas providências, Cleide contou o ocorrido ao marido de sua vizinha</p><p class="text-left text-red-500 font-bold">ALERTA DE AMEAÇA: Suspeita de perseguição aos CONTRATADOS!</p><p class="text-left">Ainda não foram tomadas providências.</p></div>',
     status: "Ativo",
-    image: "/Cleide-large.png",
+    image: "/Cleide.png",
   },
   {
     name: "Lucas Fonseca",
@@ -51,7 +51,7 @@ const profiles = [
     description:
       '<div class="space-y-2"><p class="text-left text-red-500 font-bold"><a class="text-green-400 underline text-bold" href="#">N</a>ÍVEL EXTREMO DE AMEAÇA! INTRUSÃO NO SITE DOS CONTRATADOS!</p><p class="text-left">Medidas extremas foram tomadas, ameaça neutralizada.</p></div>',
     status: "Ativo",
-    image: "/Lucas-large.png",
+    image: "/Lucas.png",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function ProfilePage({ params }: { params: { slug: string } }) {
           />
           <div className="my-1">
             <Image
-              src="/eye-single.png"
+              src="/eye.png"
               width={200}
               height={100}
               alt="Small Logo"
