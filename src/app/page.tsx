@@ -24,14 +24,16 @@ export default function Home() {
         <h1 className="text-4xl mb-8 text-glitch text-red-500" data-text="DENUNCIE!">DENUNCIE!</h1>
 
         <div className="flex flex-col md:flex-row items-center w-full max-w-5xl space-y-8 md:space-y-0 md:space-x-8">
-          <Image
-            src="/home-person.png"
-            width={200}
-            height={200}
-            alt="Contract image"
-          />
-          <div className="space-y-6 text-center md:text-left">
-            <p className="leading-relaxed text-foreground/80 md:text-lg">
+          <div className="md:w-1/3 flex justify-center">
+            <Image
+              src="/correct-contract.png"
+              width={100}
+              height={82}
+              alt="Contract image"
+            />
+          </div>
+          <div className="md:w-2/3 space-y-6 text-center md:text-left">
+            <p className="leading-relaxed text-foreground/80 md:text-lg text-justify">
               Somos uma rede que tem como lema a proteção máxima de qualquer
               ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os
               lugares e garantimos uma testemunha para lugares onde não há
@@ -45,11 +47,11 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row items-center w-full max-w-5xl md:space-x-8 mb-16 space-y-8 md:space-y-0">
           {/* Left Column */}
-          <div className="flex flex-col w-full md:w-1/2 space-y-6 items-center md:items-start text-center md:text-left">
+          <div className="flex ml-0 flex-col md:w-1/2 space-y-6 items-start text-left">
             <Image
               src="/title.png" // Title Image
               width={300}
-              height={150}
+              height={200}
               alt="Denuncie"
             />
             <p className="leading-relaxed text-foreground/80 md:text-lg">

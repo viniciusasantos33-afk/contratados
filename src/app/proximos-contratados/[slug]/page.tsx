@@ -1,119 +1,139 @@
-import Image from 'next/image';
-import { notFound } from 'next/navigation';
+'use client';
+
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { useProfileClick } from "@/contexts/ProfileClickContext";
 
 const profiles = [
   {
-    name: 'Sérgio Intéli',
-    slug: 'sergio-inteli',
+    name: "Sérgio Intéli",
+    slug: "sergio-inteli",
     age: 19,
-    role: 'Testemunha',
-    description: 'Além de um ótimo estudante e muito dedicado, Sérgio garante um ambiente educativo seguro e honesto para ele e seus colegas! Observando injustiças, ele, assim como outros de nossa rede, consegue assegurar que trapaças, infrações e desonestidade não perdurem, mantendo, assim, a paz escolar.',
-    status: 'Ativo',
-    image: '/correct.png'
+    role: "Testemunha",
+    description:
+      '<div class="space-y-2"><p class="text-left"><a class="text-green-400 underline text-bold" href="#">L</a>ocais inapropriados tiveram posters colados em sua faculdade por uma colega de classe.</p><p class="text-left">Foram tomadas providências, Sérgio contatou a diretoria da instituição de ensino.</p></div>',
+    subtitle:
+      "Além de um ótimo estudante e muito dedicado, Sérgio garante um ambiente educativo seguro e honesto para ele e seus colegas! Observando injustiças, ele, assim como outros de nossa rede, consegue assegurar que trapaças, infrações e desonestidade não perdurem, mantendo, assim, a paz escolar.",
+    status: "Ativo",
+    image: "/Sergio.png",
   },
   {
-    name: 'Maria Joaquina Santos',
-    slug: 'maria-santos',
+    name: "Maria Joaquina Santos",
+    slug: "maria-santos",
     age: 18,
-    role: 'Delatora',
-    description: 'Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.',
-    status: 'Inativo',
-    image: '/bahia.png'
+    role: "Delatora",
+    subtitle:
+      "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
+    description:
+      '<div class="space-y-2"><p class="text-left"><a class="text-green-400 underline text-bold" href="#">U</a>ma de suas missões quase falhou e pois em risco a identidade de nossa rede.</p><p class="text-left">Padrões de comportamento anormais foram notados de uma colega de classe.</p><p class="text-left">Foram tomadas providências, sem efeito.</p></div>',
+    status: "Inativo",
+    image: "/Maria.png",
   },
   {
-    name: 'Cleide Leite',
-    slug: 'cleide-leite',
+    name: "Cleide Leite",
+    slug: "cleide-leite",
     age: 58,
-    role: 'Testemunha',
-    description: 'Somos uma rede que tem como lema a proteção máxima de qualquer ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os lugares e garantimos uma testemunha para lugares onde não há nenhuma! Agora você faz parte disso, a mínima atenção aos detalhes pode SALVAR VIDAS!',
-    status: 'Ativo',
-    image: '/contract.png'
+    role: "Testemunha",
+    subtitle:
+      "Somos uma rede que tem como lema a proteção máxima de qualquer ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os lugares e garantimos uma testemunha para lugares onde não há nenhuma! Agora você faz parte disso, a mínima atenção aos detalhes pode SALVAR VIDAS!",
+    description:
+      '<div class="space-y-2"><p class="text-left"><a class="text-green-400 underline text-bold" href="#">A</a> vizinha de sua residência foi vista com outro homem que não era o marido</p><p class="text-left">Foram tomadas providências, Cleide contou o ocorrido ao marido de sua vizinha</p><p class="text-left text-red-500 font-bold">ALERTA DE AMEAÇA: Suspeita de perseguição aos CONTRATADOS!</p><p class="text-left">Ainda não foram tomadas providências.</p></div>',
+    status: "Ativo",
+    image: "/Cleide-large.png",
   },
   {
-    name: 'Lucas Fonseca',
-    slug: 'lucas-fonseca',
+    name: "Lucas Fonseca",
+    slug: "lucas-fonseca",
     age: 19,
-    role: 'Delator',
-    description: 'Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.',
-    status: 'Ativo',
-    image: '/contract.png'
+    role: "Delator",
+    subtitle:
+      "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
+    description:
+      '<div class="space-y-2"><p class="text-left text-red-500 font-bold"><a class="text-green-400 underline text-bold" href="#">N</a>ÍVEL EXTREMO DE AMEAÇA! INTRUSÃO NO SITE DOS CONTRATADOS!</p><p class="text-left">Medidas extremas foram tomadas, ameaça neutralizada.</p></div>',
+    status: "Ativo",
+    image: "/Lucas-large.png",
   },
-  {
-    name: 'A Lua',
-    slug: 'lua',
-    age: ' ',
-    role: 'Supervisora',
-    description: 'A nossa querida supervisora, está disposta a tirar dúvidas em tempo real para ajudar novos e velhos integrantes! Uma alma doce e carismática que  <span class="bg-white text-white select-none"> se salvou dos pensamentos desgraçados de nos expor, na verdade, ela devia estar morta, foi salva por causa do Lucas, outro traidor, </span> é <span class="bg-white text-white select-none"> um absurdo como ela não entendia a </span> verdadeira <span class="bg-white text-white select-none"> forma de se conduzir a sociedade, </span> seu nome <span class="bg-white text-white select-none"> foi trocado por algo que </span> é <span class="bg-white text-white select-none"> mais </span> belo, por representar nossa verdadeira função: Enxergar de cima o que não era visto antes.',
-    status: 'ATIVO',
-    image: '/phone.png'
-  }
 ];
 
 export default function ProfilePage({ params }: { params: { slug: string } }) {
-  const profile = profiles.find(p => p.slug === params.slug);
+  const profile = profiles.find((p) => p.slug === params.slug);
+  const { addClickedProfile } = useProfileClick();
 
   if (!profile) {
     notFound();
   }
 
+  const handleDescriptionClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'A' && target.getAttribute('href') === '#') {
+      e.preventDefault();
+      addClickedProfile(profile.slug);
+    }
+  };
+
   return (
-    <div className="container mx-auto px-4 py-8 md:px-6">
+    <div className="container mx-auto px-4 py-8 md:px-6 font-mono">
       {/* Top Logo */}
       <div className="flex justify-center mb-8">
         <Image
           src="/logo.png"
-          width={150}
-          height={150}
+          width={200}
+          height={200}
           alt="Logo"
+          className="my-4"
         />
       </div>
 
       <div className="flex flex-col md:flex-row md:space-x-8">
-        {/* Left Column (1/3) */}
-        <div className="md:w-1/3 flex flex-col items-center text-center">
+        {/* Left Column (1/2) */}
+        <div className="md:w-1/2 flex flex-col items-center text-center">
           <Image
             src={profile.image}
-            width={300}
-            height={300}
+            width={250}
+            height={400}
             alt={profile.name}
-            className="rounded-full shadow-lg"
+            className="shadow-lg"
           />
-          <div className="my-6">
+          <div className="my-1">
             <Image
-              src="/logo.png"
-              width={100}
+              src="/eye-single.png"
+              width={200}
               height={100}
               alt="Small Logo"
             />
           </div>
-          <div className="leading-relaxed text-foreground/80" dangerouslySetInnerHTML={{ __html: profile.description }} />
+          <div
+            className="w-80 text-justify text-glitch text-md text-foreground/80"
+            dangerouslySetInnerHTML={{ __html: profile.subtitle }}
+          />
         </div>
 
-        {/* Right Column (2/3) */}
-        <div className="md:w-2/3 mt-8 md:mt-0">
-          <h1 className="text-5xl font-bold text-glitch" data-text={profile.name}>{profile.name}</h1>
-          <p className="text-xl text-foreground/80 mt-2">Função: {profile.role}</p>
-          <p className="text-xl text-foreground/80 mt-2">Idade: {profile.age}</p>
-          
+        {/* Right Column (1/2) */}
+        <div className="md:w-1/2 mt-8 md:mt-0">
+          <h1 className="text-5xl font-bold font-sans text-glitch mb-2">{profile.name.toUpperCase()}</h1>
+          <p className="text-xl my-2">Função: {profile.role}</p>
+          <p className="text-xl my-2">Idade: {profile.age}</p>
+
           {/* Video Player */}
           <div className="my-8 aspect-w-16 aspect-h-9">
-             <iframe 
-              className="w-full h-full aspect-video"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-            </iframe>
+            <iframe
+              className="w-full h-full aspect-video border-t border-gray-600 bg-gradient-to-b from-gray-800 to-black"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
 
-          <h2 className="text-3xl font-bold text-red-500 text-glitch" data-text="Resumo da Semana">Resumo da Semana</h2>
-          <ul className="list-disc list-inside space-y-2 mt-4 text-foreground/80">
-            <li>Monitorou o alvo <span className="bg-white text-white select-none">Operação Corvo</span> por 72 horas contínuas.</li>
-            <li>Identificou e reportou 3 novas atividades suspeitas.</li>
-            <li>Evitou uma <span className="bg-white text-white select-none">violação de segurança</span> no setor 4.</li>
-            <li>Coletou inteligência crucial para a próxima fase da missão.</li>
-          </ul>
+          <h2 className="text-2xl text-glitch font-sans mb-4 font-bold text-red-500">
+            Resumo da Semana
+          </h2>
+          <div
+            className="text-xl"
+            onClick={handleDescriptionClick}
+            dangerouslySetInnerHTML={{ __html: profile.description }}
+          />
         </div>
       </div>
     </div>

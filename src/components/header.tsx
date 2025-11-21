@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-accent/50 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="mx-6 flex items-center space-x-2">
+        <div className="mx-6 flex items-center space-x-2">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Abrir menu">
@@ -44,9 +44,10 @@ export default function Header() {
               </div>
             </SheetContent>
           </Sheet>
-        </Link>
+        </div>
 
         <div className="flex items-center gap-2">
+        <Link href="/ajuda" passHref>
           <Button variant="ghost" size="icon" aria-label="Acompanhe">
             <Image 
             width={48}
@@ -55,6 +56,7 @@ export default function Header() {
             src="/phone.png"
             />
           </Button>
+          </Link>
 
 
         </div>
