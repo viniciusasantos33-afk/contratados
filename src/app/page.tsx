@@ -89,7 +89,7 @@ export default function Home() {
             className="rounded-lg shadow-lg mr-[-100px]"
           />
           <Image
-            src="/sergio.png"
+            src="/Sergio.png"
             width={600}
             height={600}
             alt="Contratado do Mês"

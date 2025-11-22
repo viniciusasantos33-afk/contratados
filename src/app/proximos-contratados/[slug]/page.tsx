@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { useProfileClick } from "@/contexts/ProfileClickContext";
 
@@ -11,7 +12,7 @@ const profiles = [
     age: 19,
     role: "Testemunha",
     description:
-      '<div class="space-y-2"><p class="text-left"><a class="text-green-400 underline text-bold" href="#">L</a>ocais inapropriados tiveram posters colados em sua faculdade por uma colega de classe.</p><p class="text-left">Foram tomadas providências, Sérgio contatou a diretoria da instituição de ensino.</p></div>',
+      '<ul class="list-disc list-inside space-y-2"><li class="text-left"><a class="text-green-400 underline text-bold" href="#">L</a>ocais inapropriados tiveram posters colados em sua faculdade por uma colega de classe.</li><li class="text-left">Foram tomadas providências, Sérgio contatou a diretoria da instituição de ensino.</li></ul>',
     subtitle:
       "Além de um ótimo estudante e muito dedicado, Sérgio garante um ambiente educativo seguro e honesto para ele e seus colegas! Observando injustiças, ele, assim como outros de nossa rede, consegue assegurar que trapaças, infrações e desonestidade não perdurem, mantendo, assim, a paz escolar.",
     status: "Ativo",
@@ -25,7 +26,7 @@ const profiles = [
     subtitle:
       "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
     description:
-      '<div class="space-y-2"><p class="text-left"><a class="text-green-400 underline text-bold" href="#">U</a>ma de suas missões quase falhou e pois em risco a identidade de nossa rede.</p><p class="text-left">Padrões de comportamento anormais foram notados de uma colega de classe.</p><p class="text-left">Foram tomadas providências, sem efeito.</p></div>',
+      '<ul class="list-disc list-inside space-y-2"><li class="text-left"><a class="text-green-400 underline text-bold" href="#">U</a>ma de suas missões quase falhou e pois em risco a identidade de nossa rede.</li><li class="text-left">Padrões de comportamento anormais foram notados de uma colega de classe.</li><li class="text-left">Foram tomadas providências, sem efeito.</li></ul>',
     status: "Inativo",
     image: "/Maria.png",
   },
@@ -37,7 +38,7 @@ const profiles = [
     subtitle:
       "Somos uma rede que tem como lema a proteção máxima de qualquer ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os lugares e garantimos uma testemunha para lugares onde não há nenhuma! Agora você faz parte disso, a mínima atenção aos detalhes pode SALVAR VIDAS!",
     description:
-      '<div class="space-y-2"><p class="text-left"><a class="text-green-400 underline text-bold" href="#">A</a> vizinha de sua residência foi vista com outro homem que não era o marido</p><p class="text-left">Foram tomadas providências, Cleide contou o ocorrido ao marido de sua vizinha</p><p class="text-left text-red-500 font-bold">ALERTA DE AMEAÇA: Suspeita de perseguição aos CONTRATADOS!</p><p class="text-left">Ainda não foram tomadas providências.</p></div>',
+      '<ul class="list-disc list-inside space-y-2"><li class="text-left"><a class="text-green-400 underline text-bold" href="#">A</a> vizinha de sua residência foi vista com outro homem que não era o marido</li><li class="text-left">Foram tomadas providências, Cleide contou o ocorrido ao marido de sua vizinha</li><li class="text-left text-red-500 font-bold">ALERTA DE AMEAÇA: Suspeita de perseguição aos CONTRATADOS!</li><li class="text-left">Ainda não foram tomadas providências.</li></ul>',
     status: "Ativo",
     image: "/Cleide.png",
   },
@@ -49,7 +50,7 @@ const profiles = [
     subtitle:
       "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
     description:
-      '<div class="space-y-2"><p class="text-left text-red-500 font-bold"><a class="text-green-400 underline text-bold" href="#">N</a>ÍVEL EXTREMO DE AMEAÇA! INTRUSÃO NO SITE DOS CONTRATADOS!</p><p class="text-left">Medidas extremas foram tomadas, ameaça neutralizada.</p></div>',
+      '<ul class="list-disc list-inside space-y-2"><li class="text-left text-red-500 font-bold"><a class="text-green-400 underline text-bold" href="#">N</a>ÍVEL EXTREMO DE AMEAÇA! INTRUSÃO NO SITE DOS CONTRATADOS!</li><li class="text-left">Medidas extremas foram tomadas, ameaça neutralizada.</li></ul>',
     status: "Ativo",
     image: "/Lucas.png",
   },
@@ -134,6 +135,11 @@ export default function ProfilePage({ params }: { params: { slug: string } }) {
             onClick={handleDescriptionClick}
             dangerouslySetInnerHTML={{ __html: profile.description }}
           />
+           <div className="mt-4 text-center">
+            <Link href="/ajuda" className="text-blue-400 underline">
+              Ir para a página de Ajuda
+            </Link>
+          </div>
         </div>
       </div>
     </div>
