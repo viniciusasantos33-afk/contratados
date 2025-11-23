@@ -135,11 +135,6 @@ export default function ProfilePage({ params }: { params: { slug: string } }) {
             onClick={handleDescriptionClick}
             dangerouslySetInnerHTML={{ __html: profile.description }}
           />
-           <div className="mt-4 text-center">
-            <Link href="/ajuda" className="text-blue-400 underline">
-              Ir para a página de Ajuda
-            </Link>
-          </div>
         </div>
       </div>
     </div>

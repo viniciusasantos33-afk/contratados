@@ -86,12 +86,12 @@ export default function Home() {
             width={400}
             height={400}
             alt="Contratado"
-            className="rounded-lg shadow-lg mr-[-100px]"
+            className="rounded-lg shadow-lg mr-[-80px]"
           />
           <Image
             src="/Sergio.png"
-            width={300}
-            height={600}
+            width={200}
+            height={400}
             alt="Contratado do Mês"
             className="rounded-lg shadow-2xl z-10"
           />
@@ -100,7 +100,7 @@ export default function Home() {
             width={400}
             height={400}
             alt="Contratado"
-            className="rounded-lg shadow-lg ml-[-100px]"
+            className="rounded-lg shadow-lg ml-[-80px]"
           />
         </div>
         {/* Text Section */}
