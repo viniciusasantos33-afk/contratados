@@ -57,7 +57,7 @@ export default function NextEmployees() {
         <h2 className="text-4xl font-bold mb-8 text-glitch text-red-500" data-text="Contratados nas Proximidades">Contratados nas Proximidades</h2>
         <div className="w-full max-w-4xl space-y-8">
           {profiles.map((profile, index) => (
-            <Link key={index} href={`/proximos-contratados/${profile.name == "Lua" ? "/lua" : profile.slug}`}>
+            <Link key={index} href={`/proximos-contratados/${profile.slug}`}>
               <div className="flex flex-col md:flex-row items-center bg-background/5 p-6 rounded-lg shadow-lg cursor-pointer hover:bg-background/10 transition-colors">
                 <Image
                   src={profile.image}
