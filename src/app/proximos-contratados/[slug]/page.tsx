@@ -109,13 +109,14 @@ export default function ProfilePage({ params }: { params: { slug: string } }) {
           </div>
           <div
             className="w-80 text-justify text-glitch text-md text-foreground/80"
+            data-text={profile.subtitle}
             dangerouslySetInnerHTML={{ __html: profile.subtitle }}
           />
         </div>
 
         {/* Right Column (1/2) */}
         <div className="md:w-1/2 mt-8 md:mt-0">
-          <h1 className="text-5xl font-bold font-sans text-glitch mb-2">{profile.name.toUpperCase()}</h1>
+          <h1 className="text-5xl font-bold font-sans text-glitch mb-2" data-text={profile.name.toUpperCase()}>{profile.name.toUpperCase()}</h1>
           <p className="text-xl my-2">Função: {profile.role}</p>
           <p className="text-xl my-2">Idade: {profile.age}</p>
 
@@ -132,7 +133,7 @@ export default function ProfilePage({ params }: { params: { slug: string } }) {
             ></iframe>
           </div>
 
-          <h2 className="text-2xl text-glitch font-sans mb-4 font-bold text-red-500">
+          <h2 className="text-2xl text-glitch font-sans mb-4 font-bold text-red-500" data-text="Resumo da Semana">
             Resumo da Semana
           </h2>
           <div
