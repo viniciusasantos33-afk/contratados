@@ -28,7 +28,7 @@ export default function IntroducaoPage() {
       </div>
       <button
         onClick={goToHome}
-        className="mt-8 font-mono font-bold text-white text-green-400 hover:bg-green-700 border-2 border-green-400 rounded-none py-2 px-6 shadow-[0_0_15px_#98FB98] hover:shadow-[0_0_25px_#98FB98] transition-all duration-300"
+        className="mt-8 font-mono font-bold text-red-500 hover:bg-red-700 border-2 border-red-500 rounded-none py-2 px-6 shadow-[0_0_15px_#f56565] hover:shadow-[0_0_25px_#f56565] transition-all duration-300"
       >
         Entrar no Site
       </button>
