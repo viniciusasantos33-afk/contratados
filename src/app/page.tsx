@@ -82,7 +82,7 @@ export default function Home() {
         {/* Images Section */}
         <div className="flex items-end justify-center  my-8">
           <Image
-            src="/404_versed.png"
+            src="/LuaComemorando.gif"
             width={400}
             height={400}
             alt="Contratado"
@@ -96,7 +96,7 @@ export default function Home() {
             className="rounded-lg shadow-2xl z-10"
           />
           <Image
-            src="/404.png"
+            src="/LuaComemorando.gif"
             width={400}
             height={400}
             alt="Contratado"
@@ -106,7 +106,7 @@ export default function Home() {
         {/* Text Section */}
         <div className="mt-8 text-center">
           <h3 className="text-3xl font-bold text-glitch" data-text="SÉRGIO INTÉLI">SÉRGIO INTÉLI</h3>
-          <h4 className="text-xl text-foreground/90 mt-2 text-glitch" data-text="MAIS DE 69 INFRAÇÕES EVITADAS!">MAIS DE 69 INFRAÇÕES EVITADAS!</h4>
+          <h4 className="text-xl text-foreground/90 mt-2 text-glitch space-y-2" data-text="MAIS DE 69 INFRAÇÕES EVITADAS!">MAIS DE 69 INFRAÇÕES EVITADAS!</h4>
           <ul className="max-w-2xl text-center mx-auto mt-4 leading-relaxed text-foreground/80 list-disc list-inside space-y-2 text-left md:text-lg">
               <li>Seja um CONTRATADO DO MÊS superando seus colegas de trabalho na quantidade de infrações evitadas!</li>
               <li>Por meio de denuncias, punições ou tomada de medidas!</li>

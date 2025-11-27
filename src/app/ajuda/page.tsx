@@ -26,7 +26,7 @@ export default function HelpPage() {
     // In a real-world application, you would want to handle this on the server side.
     switch (password) {
       case "Luana":
-        router.push("/proximos-contratados/lua");
+        router.push("/proximos-contratados/blog-da-lua");
         break;
       case "Calisto":
         router.push("/calisto");
@@ -35,7 +35,7 @@ export default function HelpPage() {
         router.push("/introducao");
         break;
       case "A Lua":
-        router.push("/proximos-contratados/lua");
+        router.push("/proximos-contratados/blog-da-lua");
         break;
       default:
         alert("Senha incorreta!");

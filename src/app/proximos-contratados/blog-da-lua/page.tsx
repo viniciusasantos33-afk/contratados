@@ -5,23 +5,24 @@ import Link from 'next/link';
 
 export default function LulusWorldPage() {
   return (
-    <div className="bg-[#fceef5] font-mono" style={{ backgroundImage: "url('/hearts-bg.png')", backgroundRepeat: 'repeat' }}>
-      <div className="min-h-screen">
-        <header className="py-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl font-bold text-[#ff69b4]" style={{ fontFamily: "'Comic Sans MS', cursive, sans-serif" }}>
-              Lulu&apos;s world
-            </h1>
-          </div>
-        </header>
-
-        <main className="container mx-auto mt-4 max-w-3xl rounded-lg border-4 border-pink-300 bg-white bg-opacity-80 p-6 shadow-lg">
+    <div className="min-h-screen font-mono" style={{ backgroundImage: "url('/heart-bg.png')", backgroundRepeat: 'repeat' }}>
+      <header className="bg-white py-4 shadow-lg">
+        <div className="container mx-auto flex justify-center">
+          <Image
+            src="/logo-blog.png"
+            alt="Logo do Blog da Lua"
+            width={300}
+            height={100}
+          />
+        </div>
+      </header>
+      <main className="container mx-auto my-8 max-w-3xl rounded-lg border-4 border-pink-300 bg-white bg-opacity-70 p-6 shadow-lg">
           {/* Post 1 */}
           <div className="mb-8 border-b-2 border-dashed border-pink-300 pb-4">
             <p className="text-sm text-pink-400">02/02</p>
             <h2 className="mb-2 text-2xl font-bold text-pink-500">1° POST!!!</h2>
-            <div className="mb-4 flex justify-center">
-               <Image src="/Lua.png" alt="Foto da Lulu" width={200} height={200} className="rounded-full border-4 border-pink-300" />
+            <div className="mb-4 flex">
+               <Image src="/Luana.png" alt="Foto da Lulu" width={200} height={200} className="border-4 border-pink-300 my-8" />
             </div>
             <p className="text-pink-600">
               Oiiieh!!! Eu sou a Lu! ^-^ Esperei muito pra fazer esse blog ;-;. srrr<br />
@@ -67,10 +68,16 @@ export default function LulusWorldPage() {
             <h2 className="mb-2 text-2xl font-bold text-pink-500">ESPIÕES???</h2>
             <p className="text-pink-600">EU VI UM DELES!!! OLHA ONDE UNS MORAM PRA OBSERVAR!!!</p>
             <div className="my-4 flex justify-center">
-              <video controls className="w-full max-w-sm rounded border-4 border-pink-300">
-                <source src="/spy-video.mp4" type="video/mp4" />
-                Seu navegador não suporta o elemento de vídeo.
-              </video>
+             <iframe
+                className="w-full max-w-sm rounded border-4 border-pink-300"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/g-wzixy13qI"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
 
@@ -109,7 +116,6 @@ export default function LulusWorldPage() {
             </p>
           </div>
         </main>
-      </div>
     </div>
   );
 }

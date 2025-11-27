@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Header from '@/components/header';
 import StarryBackground from '@/components/starry-background';
-import Footer from '@/components/footer';
 import { ProfileClickProvider } from '@/contexts/ProfileClickContext';
+import { PageWrapper } from '@/components/page-wrapper';
 
 export const metadata: Metadata = {
   title: 'Contratados',
@@ -22,9 +21,7 @@ export default function RootLayout({
         <ProfileClickProvider>
           <StarryBackground />
           <div className="crt-effect relative z-10 flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
+            <PageWrapper>{children}</PageWrapper>
           </div>
         </ProfileClickProvider>
       </body>

@@ -16,7 +16,7 @@ const profiles = [
     slug: 'maria-santos',
     age: 18,
     role: 'Delatora',
-    description: 'Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.',
+    description: 'Charmosa e antenada, Joaquina é uma CONTRATADA muito eficaz. Afastando o mal com a verdade que é dita para todos a sua volta, ela não só consegue respeito das pessoas ao seu redor, como também cumpre com a sua função de forma eficaz.',
     status: 'Inativo',
     image: '/Maria.png'
   },
@@ -25,7 +25,7 @@ const profiles = [
     slug: 'cleide-leite',
     age: 58,
     role: 'Testemunha',
-    description: 'Somos uma rede que tem como lema a proteção máxima de qualquer ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os lugares e garantimos uma testemunha para lugares onde não há nenhuma! Agora você faz parte disso, a mínima atenção aos detalhes pode SALVAR VIDAS!',
+    description: 'Uma das agentes mais antigas, Cleide (apelidada carinhosamente pela equipe de "Dona Cleide") é uma senhora muito observadora que não quer nada além do bem de sua vizinhança trazendo a verdade e fazendo questão de denunciar qualquer delinquente ou anormalidade.',
     status: 'Ativo',
     image: '/Cleide.png'
   },

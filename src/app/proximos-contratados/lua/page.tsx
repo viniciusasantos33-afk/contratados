@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useProfileClick } from "@/contexts/ProfileClickContext";
+import Link from "next/link";
 
 const profile = {
   name: "A Lua",
@@ -9,7 +10,7 @@ const profile = {
   age: " ",
   role: "Supervisora",
   description:
-    '<p><a class="text-green-400 underline text-bold" href="#">A</a> nossa querida supervisora, está disposta a tirar dúvidas em tempo real para ajudar novos e velhos integrantes! Uma alma doce e carismática que  <span class="bg-white text-white select-none"> se salvou dos pensamentos desgraçados de nos expor, na verdade, ela devia estar morta, foi salva por causa do Lucas, outro traidor, </span> é <span class="bg-white text-white select-none"> um absurdo como ela não entendia a </span> verdadeira <span class="bg-white text-white select-none"> forma de se conduzir a sociedade, </span> seu nome <span class="bg-white text-white select-none"> foi trocado por algo que </span> é <span class="bg-white text-white select-none"> mais </span> belo, por representar nossa verdadeira função: Enxergar de cima o que não era visto antes.</p>',
+    '<p><a class="text-green-400 underline text-bold" href="/ajuda">A</a> nossa querida supervisora, está disposta a tirar dúvidas em tempo real para ajudar novos e velhos integrantes! Uma alma doce e carismática que  <span class="bg-white text-white select-none"> se salvou dos pensamentos desgraçados de nos expor, na verdade, ela devia estar morta, foi salva por causa do Lucas, outro traidor, </span> é <span class="bg-white text-white select-none"> um absurdo como ela não entendia a </span> verdadeira <span class="bg-white text-white select-none"> forma de se conduzir a sociedade, </span> seu nome <span class="bg-white text-white select-none"> foi trocado por algo que </span> é <span class="bg-white text-white select-none"> mais </span> belo, por representar nossa verdadeira função: Enxergar de cima o que não era visto antes.</p>',
   status: "ATIVO",
   image: "/Lua.png",
 };
@@ -55,12 +56,14 @@ export default function ProfilePage() {
         </div>
 
         <div className="my-1">
-          <Image
-            src="/eye.png"
-            width={200}
-            height={100}
-            alt="Small Logo"
-          />
+          <Link href="/ajuda">
+            <Image
+              src="/eye.png"
+              width={200}
+              height={100}
+              alt="Small Logo"
+            />
+          </Link>
         </div>
 
         <div
