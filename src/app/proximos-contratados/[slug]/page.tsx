@@ -26,10 +26,10 @@ const profiles = [
     role: "Delatora",
     videoUrl: "https://www.youtube.com/embed/XWnvc-qwQQg?si=W3wx5lg2H3uUxmFD",
     subtitle:
-      "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
+      "Charmosa e antenada, Joaquina é uma CONTRATADA muito eficaz. Afastando o mal com a verdade que é dita para todos a sua volta, ela não só consegue respeito das pessoas ao seu redor, como também cumpre com a sua função de forma eficaz.",
     description:
       '<ul class="list-disc list-inside space-y-2"><li class="text-left"><a class="text-green-400 underline text-bold" href="#">U</a>ma de suas missões quase falhou e pois em risco a identidade de nossa rede.</li><li class="text-left">Padrões de comportamento anormais foram notados de uma colega de classe.</li><li class="text-left">Foram tomadas providências, sem efeito.</li></ul>',
-    status: "Inativo",
+    status: "Ativo",
     image: "/Maria.png",
   },
   {
@@ -39,7 +39,7 @@ const profiles = [
     role: "Testemunha",
     videoUrl: "https://www.youtube.com/embed/ghbhWJ-jEOM?si=TtewWCcHzQEDzC6R",
     subtitle:
-      "Somos uma rede que tem como lema a proteção máxima de qualquer ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os lugares e garantimos uma testemunha para lugares onde não há nenhuma! Agora você faz parte disso, a mínima atenção aos detalhes pode SALVAR VIDAS!",
+      "Uma das agentes mais antigas, Cleide (apelidada carinhosamente pela equipe de Dona Cleide) é uma senhora muito observadora que não quer nada além do bem de sua vizinhança trazendo a verdade e fazendo questão de denunciar qualquer delinquente ou anormalidade.",
     description:
       '<ul class="list-disc list-inside space-y-2"><li class="text-left"><a class="text-green-400 underline text-bold" href="#">A</a> vizinha de sua residência foi vista com outro homem que não era o marido</li><li class="text-left">Foram tomadas providências, Cleide contou o ocorrido ao marido de sua vizinha</li><li class="text-left text-red-500 font-bold">ALERTA DE AMEAÇA: Suspeita de perseguição aos CONTRATADOS!</li><li class="text-left">Ainda não foram tomadas providências.</li></ul>',
     status: "Ativo",
