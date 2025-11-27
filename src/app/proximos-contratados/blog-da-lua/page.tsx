@@ -1,9 +1,26 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function LulusWorldPage() {
+  const [isBlocked, setIsBlocked] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    // Verifica se a página deve ser bloqueada ao carregar
+    if (sessionStorage.getItem('isBlogBlocked') === 'true') {
+      router.replace('/');
+    }
+  }, [router]);
+
+  const handleBlockClick = () => {
+    sessionStorage.setItem('isBlogBlocked', 'true');
+    router.push('/404'); // Redireciona para a página de erro 404
+  };
+  
   return (
     <div className="min-h-screen font-mono" style={{ backgroundImage: "url('/heart-bg.png')", backgroundRepeat: 'repeat' }}>
       <header className="bg-white py-4 shadow-lg">
@@ -108,12 +125,22 @@ export default function LulusWorldPage() {
           </div>
 
           {/* Post 8 */}
-          <div className="pb-4">
+          <div className="pb-4 border-b-2 border-dashed border-pink-300 mb-8">
             <p className="text-sm text-pink-400">05/03</p>
             <h2 className="mb-2 text-2xl font-bold text-pink-500">Adeus</h2>
             <p className="text-pink-600">
               Eu nunca concordei e nunca vou concordar com o voyeurismo sem sentido desses doentes que não conseguem enxergar a diferença entre privacidade, crimes e justiça real. Estou registrando pela última vez minha opinião. Jamais concordarei com isso. Jamais.
             </p>
+          </div>
+
+          {/* Botão de Erro Fatal */}
+          <div className="flex justify-center mt-8">
+              <button
+                onClick={handleBlockClick}
+                className="bg-pink-500 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-pink-600 transition-all duration-300 border-2 border-pink-700"
+              >
+                NÃO CLIQUE AQUI
+              </button>
           </div>
         </main>
     </div>
