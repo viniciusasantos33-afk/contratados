@@ -19,7 +19,7 @@ export default function IntroducaoPage() {
       <div className="w-full max-w-4xl aspect-w-16 aspect-h-9">
         <iframe
           className="w-full h-full aspect-video"
-          src="https://www.youtube.com/embed/HL860YvwcI0?si=3DrMjgB-8jDiCoBU&autoplay=1&mute=1&controls=0"
+          src="https://www.youtube.com/embed/HL860YvwcI0?si=3DrMjgB-8jDiCoBU&autoplay=1&controls=0"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
