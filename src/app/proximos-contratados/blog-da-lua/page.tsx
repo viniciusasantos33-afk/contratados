@@ -12,13 +12,13 @@ export default function LulusWorldPage() {
   useEffect(() => {
     // Verifica se a página deve ser bloqueada ao carregar
     if (sessionStorage.getItem('isBlogBlocked') === 'true') {
-      router.replace('/');
+      router.replace('/calisto');
     }
   }, [router]);
 
   const handleBlockClick = () => {
     sessionStorage.setItem('isBlogBlocked', 'true');
-    router.push('/404'); // Redireciona para a página de erro 404
+    router.push('/calisto'); // Redireciona para a página dos contratados
   };
   
   return (
