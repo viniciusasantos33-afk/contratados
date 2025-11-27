@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useProfileClick } from "@/contexts/ProfileClickContext";
 
@@ -10,15 +10,17 @@ const TOTAL_PROFILES = 5;
 export default function HelpPage() {
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { clickedProfiles } = useProfileClick();
   
   const [finished, setFinished] = useState(false);
 
   useEffect(() => {
-    if (clickedProfiles.length === TOTAL_PROFILES) {
+    const isFinished = searchParams.get('finished') === 'true';
+    if (isFinished || clickedProfiles.length === TOTAL_PROFILES) {
       setFinished(true);
     }
-  }, [clickedProfiles]);
+  }, [clickedProfiles, searchParams]);
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();

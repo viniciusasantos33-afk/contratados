@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useProfileClick } from "@/contexts/ProfileClickContext";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const profile = {
   name: "A Lua",
@@ -10,21 +11,30 @@ const profile = {
   age: " ",
   role: "Supervisora",
   description:
-    '<p><a class="text-green-400 underline text-bold" href="/ajuda">A</a> nossa querida supervisora, está disposta a tirar dúvidas em tempo real para ajudar novos e velhos integrantes! Uma alma doce e carismática que  <span class="bg-white text-white select-none"> se salvou dos pensamentos desgraçados de nos expor, na verdade, ela devia estar morta, foi salva por causa do Lucas, outro traidor, </span> é <span class="bg-white text-white select-none"> um absurdo como ela não entendia a </span> verdadeira <span class="bg-white text-white select-none"> forma de se conduzir a sociedade, </span> seu nome <span class="bg-white text-white select-none"> foi trocado por algo que </span> é <span class="bg-white text-white select-none"> mais </span> belo, por representar nossa verdadeira função: Enxergar de cima o que não era visto antes.</p>',
+    '<p><a class="text-green-400 underline text-bold" href="#">A</a> nossa querida supervisora, está disposta a tirar dúvidas em tempo real para ajudar novos e velhos integrantes! Uma alma doce e carismática que  <span class="bg-white text-white select-none"> se salvou dos pensamentos desgraçados de nos expor, na verdade, ela devia estar morta, foi salva por causa do Lucas, outro traidor, </span> é <span class="bg-white text-white select-none"> um absurdo como ela não entendia a </span> verdadeira <span class="bg-white text-white select-none"> forma de se conduzir a sociedade, </span> seu nome <span class="bg-white text-white select-none"> foi trocado por algo que </span> é <span class="bg-white text-white select-none"> mais </span> belo, por representar nossa verdadeira função: Enxergar de cima o que não era visto antes.</p>',
   status: "ATIVO",
   image: "/Lua.png",
 };
 
 export default function ProfilePage() {
   const { addClickedProfile } = useProfileClick();
+  const router = useRouter();
 
   const handleDescriptionClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
     if (target.tagName === 'A' && target.getAttribute('href') === '#') {
       e.preventDefault();
       addClickedProfile(profile.slug);
+      // Forçar a navegação para a página de ajuda com a lógica de "finished"
+      router.push('/ajuda?finished=true');
     }
   };
+
+  const handleEyeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      addClickedProfile(profile.slug);
+      router.push('/ajuda?finished=true');
+  }
 
   return (
     <div className="container mx-auto px-4 py-8 md:px-6 font-mono text-glitch">
@@ -39,7 +49,7 @@ export default function ProfilePage() {
       </div>
 
       <div className="text-center my-8">
-        <h1 className="text-4xl text-sans font-bold">
+        <h1 className="text-4xl text-sans font-bold text-glitch" data-text={profile.name.toUpperCase()}>
           {profile.name.toUpperCase()}
         </h1>
       </div>
@@ -56,7 +66,7 @@ export default function ProfilePage() {
         </div>
 
         <div className="my-1">
-          <Link href="/ajuda">
+          <Link href="/ajuda" onClick={handleEyeClick}>
             <Image
               src="/eye.png"
               width={200}
@@ -72,11 +82,11 @@ export default function ProfilePage() {
           dangerouslySetInnerHTML={{ __html: profile.description }}
         />
 
-        <h2 className="text-4xl font-sans my-8 font-bold">PRECISA DE AJUDA?</h2>
+        <h2 className="text-4xl font-sans my-8 font-bold text-glitch" data-text="PRECISA DE AJUDA?">PRECISA DE AJUDA?</h2>
 
         <Image src="/help.png" width={400} height={100} alt="Small Logo" />
 
-        <a href="/ajuda" className="my-4 text-center text-foreground/80 max-w-xl mx-auto text-xl">
+        <a href="/ajuda" onClick={handleEyeClick} className="my-4 text-center text-foreground/80 max-w-xl mx-auto text-xl cursor-pointer">
           Entre em contato com a nossa supervisora clicando na lua acima ou na
           do canto superior direito!
         </a>
