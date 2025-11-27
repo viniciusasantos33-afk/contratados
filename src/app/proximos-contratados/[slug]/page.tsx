@@ -11,8 +11,7 @@ const profiles = [
     slug: "sergio-inteli",
     age: 19,
     role: "Testemunha",
-    // ADICIONE O LINK ESPECÍFICO DESTE PERFIL AQUI (Mantenha o formato /embed/)
-    videoUrl: "https://www.youtube.com/embed/VIDEO_DO_SERGIO", 
+    videoUrl: "https://www.youtube.com/embed/seoLSxaqR1Q",
     description:
       '<ul class="list-disc list-inside space-y-2"><li class="text-left"><a class="text-green-400 underline text-bold" href="#">L</a>ocais inapropriados tiveram posters colados em sua faculdade por uma colega de classe.</li><li class="text-left">Foram tomadas providências, Sérgio contatou a diretoria da instituição de ensino.</li></ul>',
     subtitle:
@@ -25,8 +24,7 @@ const profiles = [
     slug: "maria-santos",
     age: 18,
     role: "Delatora",
-    // ADICIONE O LINK ESPECÍFICO DESTE PERFIL AQUI
-    videoUrl: "https://www.youtube.com/embed/VIDEO_DA_MARIA",
+    videoUrl: "https://www.youtube.com/embed/XWnvc-qwQQg",
     subtitle:
       "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
     description:
@@ -39,8 +37,7 @@ const profiles = [
     slug: "cleide-leite",
     age: 58,
     role: "Testemunha",
-    // ADICIONE O LINK ESPECÍFICO DESTE PERFIL AQUI
-    videoUrl: "https://www.youtube.com/embed/VIDEO_DA_CLEIDE",
+    videoUrl: "https://www.youtube.com/embed/ghbhWJ-jEOM",
     subtitle:
       "Somos uma rede que tem como lema a proteção máxima de qualquer ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os lugares e garantimos uma testemunha para lugares onde não há nenhuma! Agora você faz parte disso, a mínima atenção aos detalhes pode SALVAR VIDAS!",
     description:
@@ -53,8 +50,7 @@ const profiles = [
     slug: "lucas-fonseca",
     age: 19,
     role: "Delator",
-    // ADICIONE O LINK ESPECÍFICO DESTE PERFIL AQUI
-    videoUrl: "https://www.youtube.com/embed/VIDEO_DO_LUCAS",
+    videoUrl: "https://www.youtube.com/embed/L92LxPJpUK0",
     subtitle:
       "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
     description:
