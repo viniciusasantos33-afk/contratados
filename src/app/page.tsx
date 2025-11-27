@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -57,9 +58,11 @@ export default function Home() {
             <p className="leading-relaxed text-foreground/80 md:text-lg">
               Descubra o amigo secreto de outros CONTRATADOS e ganhe todos os presentes!
             </p>
-            <button className="bg-transparent rounded-xl border-4 border-red-900 text-accent-foreground px-6 py-2 rounded-xl font-bold uppercase tracking-widest hover:bg-accent/90">
-              PARTICIPE!
-            </button>
+            <Link href="/404">
+              <button className="bg-transparent rounded-xl border-4 border-red-900 text-accent-foreground px-6 py-2 rounded-xl font-bold uppercase tracking-widest hover:bg-accent/90">
+                PARTICIPE!
+              </button>
+            </Link>
           </div>
 
           {/* Right Column */}
