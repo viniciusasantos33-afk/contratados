@@ -78,10 +78,10 @@ export default function HelpPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center">
       <Image
-        src="/phone.png"
+        src="/manutenção.png"
         width={200}
         height={200}
-        alt="No service"
+        alt="Manutenção"
         className="cursor-pointer"
       />
       <h1
