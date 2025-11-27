@@ -26,18 +26,19 @@ export default function HelpPage() {
     e.preventDefault();
     // NOTE: This password logic is not secure and is for demonstration purposes only.
     // In a real-world application, you would want to handle this on the server side.
-    switch (password) {
-      case "Luana":
+    const processedPassword = password.trim().toLowerCase();
+    switch (processedPassword) {
+      case "luana":
         router.push("/proximos-contratados/blog-da-lua");
         break;
-      case "Calisto":
+      case "a lua":
+        router.push("/proximos-contratados/blog-da-lua");
+        break;
+      case "calisto":
         router.push("/calisto");
         break;
-      case "Introdução":
+      case "introdução":
         router.push("/introducao");
-        break;
-      case "A Lua":
-        router.push("/proximos-contratados/blog-da-lua");
         break;
       default:
         alert("Senha incorreta!");
