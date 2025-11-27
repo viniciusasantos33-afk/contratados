@@ -72,7 +72,7 @@ export default function LulusWorldPage() {
                 className="w-full max-w-sm rounded border-4 border-pink-300"
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/eL1R_15E0x4"
+                src="https://www.youtube.com/embed/L92LxPJpUK0?si=GV-K_szEf_XWkivk"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

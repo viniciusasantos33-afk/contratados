@@ -11,7 +11,7 @@ const profiles = [
     slug: "sergio-inteli",
     age: 19,
     role: "Testemunha",
-    videoUrl: "https://www.youtube.com/embed/DFq12_G8pGg",
+    videoUrl: "https://www.youtube.com/embed/seoLSxaqR1Q?si=wvxG2tPd946rOK1v",
     description:
       '<ul class="list-disc list-inside space-y-2"><li class="text-left"><a class="text-green-400 underline text-bold" href="#">L</a>ocais inapropriados tiveram posters colados em sua faculdade por uma colega de classe.</li><li class="text-left">Foram tomadas providências, Sérgio contatou a diretoria da instituição de ensino.</li></ul>',
     subtitle:
@@ -24,7 +24,7 @@ const profiles = [
     slug: "maria-santos",
     age: 18,
     role: "Delatora",
-    videoUrl: "https://www.youtube.com/embed/m5r_S-p-u5M",
+    videoUrl: "https://www.youtube.com/embed/XWnvc-qwQQg?si=W3wx5lg2H3uUxmFD",
     subtitle:
       "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
     description:
@@ -37,7 +37,7 @@ const profiles = [
     slug: "cleide-leite",
     age: 58,
     role: "Testemunha",
-    videoUrl: "https://www.youtube.com/embed/eL1R_15E0x4",
+    videoUrl: "https://www.youtube.com/embed/ghbhWJ-jEOM?si=TtewWCcHzQEDzC6R",
     subtitle:
       "Somos uma rede que tem como lema a proteção máxima de qualquer ambiente por meio da simples OBSERVAÇÃO! Temos olhos em todos os lugares e garantimos uma testemunha para lugares onde não há nenhuma! Agora você faz parte disso, a mínima atenção aos detalhes pode SALVAR VIDAS!",
     description:
@@ -50,7 +50,7 @@ const profiles = [
     slug: "lucas-fonseca",
     age: 19,
     role: "Delator",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://www.youtube.com/embed/zMxOrUH70sk?si=tUOd5yhX4TMMyrI6",
     subtitle:
       "Um estudante extrovertido, sempre em busca de novas sensações!, esse é Lucas! E como intermediário responsável pela comunicação extra oficial, Lucas garante que os relatos sejam autênticos e cheguem ao time superiores, mentiras não serão toleradas.",
     description:
