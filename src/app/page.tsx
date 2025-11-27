@@ -80,7 +80,7 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-16 md:px-6">
       <div className="flex flex-col items-center justify-center text-center">
-      <h1 className="text-4xl mb-8 text-glitch text-red-500" data-text="CONTRATADO DO MES">CONTRATADO DO MES</h1>
+      <h1 className="text-4xl mb-8 text-glitch text-red-500" data-text="CONTRATADO DO MÊS">CONTRATADO DO MÊS</h1>
       <h2 className="text-2xl mb-8 text-foreground/80 text-glitch" data-text="PARABÉNS!">PARABÉNS!</h2>
         {/* Images Section */}
         <div className="flex items-end justify-center  my-8">
