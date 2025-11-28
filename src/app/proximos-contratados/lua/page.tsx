@@ -87,6 +87,8 @@ export default function ProfilePage() {
               className="w-full h-full aspect-video border-t border-gray-600 bg-gradient-to-b from-gray-800 to-black"
               src="https://www.youtube.com/embed/L92LxPJpUK0?si=GV-K_szEf_XWkivk"
               title="YouTube video player"
+              width="560"
+              height="315"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
