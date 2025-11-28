@@ -82,6 +82,19 @@ export default function ProfilePage() {
           dangerouslySetInnerHTML={{ __html: profile.description }}
         />
 
+        <div className="my-4 flex justify-center">
+           <iframe
+              className="w-full max-w-sm rounded border-4 border-pink-300"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/L92LxPJpUK0?si=GV-K_szEf_XWkivk"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+        </div>
+
         <h2 className="text-4xl font-sans my-8 font-bold text-glitch" data-text="PRECISA DE AJUDA?">PRECISA DE AJUDA?</h2>
 
         <Image src="/help.png" width={400} height={100} alt="Small Logo" />
