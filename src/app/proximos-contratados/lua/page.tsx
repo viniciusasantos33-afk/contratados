@@ -84,9 +84,7 @@ export default function ProfilePage() {
 
         <div className="my-4 flex justify-center">
            <iframe
-              className="w-full max-w-sm rounded border-4 border-pink-300"
-              width="560"
-              height="315"
+              className="w-full h-full aspect-video border-t border-gray-600 bg-gradient-to-b from-gray-800 to-black"
               src="https://www.youtube.com/embed/L92LxPJpUK0?si=GV-K_szEf_XWkivk"
               title="YouTube video player"
               frameBorder="0"
