@@ -84,18 +84,6 @@ export default function LulusWorldPage() {
             <p className="text-sm text-pink-400">20/02</p>
             <h2 className="mb-2 text-2xl font-bold text-pink-500">ESPIÕES???</h2>
             <p className="text-pink-600">EU VI UM DELES!!! OLHA ONDE UNS MORAM PRA OBSERVAR!!!</p>
-            <div className="my-4 flex justify-center">
-             <iframe
-                className="w-full max-w-sm rounded border-4 border-pink-300"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/L92LxPJpUK0?si=GV-K_szEf_XWkivk"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
           </div>
 
           {/* Post 5 */}
